@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loguin Page</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+                
+        <!-- Icons -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <div class="particles-container" id="particles-js"></div>
+        
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>
+                        <h1>Loguin </h1>
+                        <p class="subtitle">Bem-vindo de volta</p>
+                    </header>
+
+                    <form action="#">
+                        <div class="field input-field">
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Email" class="input" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Senha" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button type="submit">Entrar</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Não tem uma conta? <a href="#" class="link signup-link">Criar conta</a></span>
+                    </div>
+
+                    <div class="form-link forgot">
+                        <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+                    </div>
+
+                    <div class="divider">
+                        <span>ou continue com</span>
+                    </div>
+
+                    <div class="social-login">
+                        <a href="#" class="field google">
+                            <i class='bx bxl-google'></i>
+                            <span>Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Particulas.js -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        
+        <!-- JavaScript -->
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+/* Variáveis CSS */
+:root {
+    --bg-primary: #111;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --accent-cyan: #00f2ff;
+    --accent-magenta: #ff00ff;
+    --accent-blue: #0066ff;
+    --accent-purple: #9900ff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.03);
+    --transition: all 0.3s ease;
+}
+
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* Container de Partículas */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Container Principal */
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Formulário */
+.form {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+    width: 100%;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Campos de Input */
+.field {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0 1rem;
+    transition: var(--transition);
+}
+
+.input-field:focus-within {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.input-field i {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.input-field input {
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.input-field input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Botão */
+.button-field button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    border: none;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.button-field button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3);
+}
+
+/* Links */
+.form-link {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.form-link a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.form-link a:hover {
+    color: var(--accent-purple);
+}
+
+/* Divisor */
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: var(--glass-border);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background: var(--bg-primary);
+    padding: 0 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Login Social */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-login a:hover {
+    background: var(--glass-bg);
+    transform: translateY(-2px);
+}
+
+.social-login a.google-btn {
+    background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335);
+    background-size: 300% 300%;
+    animation: gradient 3s ease infinite;
+    border: none;
+}
+
+.social-login a.google-btn:hover {
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.5);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.social-login i {
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 480px) {
+    .form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
